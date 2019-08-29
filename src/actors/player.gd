@@ -7,10 +7,17 @@ var gravity = 6
 var jump_speed = 4
 var max_walking_speed = 80
 var max_sprinting_speed = 4
+var mouse_sensitivy = 0.006
 
 func _process(delta):
 	update_velocity(delta)
 	move_and_slide(velocity, Vector3.UP)
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * mouse_sensitivy)
+		$Pivot.rotate_x(-event.relative.y * mouse_sensitivy)
+		$Pivot.rotation.x = clamp($Pivot.rotation.x, -1.2, 1.2)
 
 func update_velocity(delta):
 	var desired_velocity = get_input_vec() * max_walking_speed
