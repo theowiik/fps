@@ -11,4 +11,4 @@ Testing the godot game engine
 |scene files|UpperCamelCase|
 
 ## Example
-![Example of structure and naming](file_name_and_structure_example_01.png "Example of structure and naming")
+![Example of structure and naming](markdown_files/file_name_and_structure_example_01.png "Example of structure and naming")
