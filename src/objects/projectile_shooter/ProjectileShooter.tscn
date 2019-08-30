@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/objects/projectile_shooter/projectile_shooter.gd" type="Script" id=1]
 
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.85
+
 [node name="ProjectileShooter" type="Spatial"]
 script = ExtResource( 1 )
+
+[node name="ProjectileShooterMesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, -0.34019 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="ProjectileOutputPoint" type="Position3D" parent="ProjectileShooterMesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.451969, 1.97562e-008 )
