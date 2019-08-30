@@ -66,6 +66,9 @@ func get_input_vec():
 
 	return input_vec.normalized()
 
+func take_damage(amount = 1):
+	health -= abs(amount)
+
 func is_moving():
 	return velocity.length() != 0
 

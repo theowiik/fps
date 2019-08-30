@@ -31,6 +31,7 @@ fov = 86.5387
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238666, 0.255884, -0.39529 )
 
 [node name="ProjectileShooter" parent="Pivot/ProjectileShooterHolder" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_right = 247.0

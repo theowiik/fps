@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/objects/projectile/Projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/objects/arrow/arrow.gd" type="Script" id=2]
+[ext_resource path="res://src/materials/black.tres" type="Material" id=3]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.5
+
+[sub_resource type="CylinderMesh" id=2]
+material = ExtResource( 3 )
+top_radius = 0.001
+bottom_radius = 0.06
+height = 0.1
+
+[node name="Arrow" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ProjectileMesh" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="ProjectileMesh" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.292271, 1.27756e-008 )
+mesh = SubResource( 2 )
+material/0 = null

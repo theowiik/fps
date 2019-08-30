@@ -1,6 +1,6 @@
 extends MeshInstance
 
-const PROJECTILE = preload('res://src/objects/projectile/Projectile.tscn')
+const PROJECTILE = preload('res://src/objects/arrow/Arrow.tscn')
 onready var projectile_output_point = $ProjectileOutputPoint
 onready var timer = $Timer
 onready var animation_player = $AnimationPlayer
