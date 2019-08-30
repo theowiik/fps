@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/game.gd" type="Script" id=1]
 [ext_resource path="res://src/materials/ground.tres" type="Material" id=2]
 [ext_resource path="res://src/actors/player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/objects/barrel/Barrel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/particles/Smoke.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/objects/coin/Coin.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 20, 0.2, 10 )
@@ -44,3 +45,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 1.60057, 2 )
 
 [node name="Smoke" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3 )
+
+[node name="Coin" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, -8.74228e-008, -2.38498e-008, -8.74228e-008, -1, 0, -2.38498e-008, 2.08501e-015, -1, -4.5, 1.5, -0.5 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, -8.74228e-008, -2.38498e-008, -8.74228e-008, -1, 0, -2.38498e-008, 2.08501e-015, -1, -5.5, 1.5, -0.5 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, -8.74228e-008, -2.38498e-008, -8.74228e-008, -1, 0, -2.38498e-008, 2.08501e-015, -1, -6.5, 1.5, -0.5 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, -8.74228e-008, -2.38498e-008, -8.74228e-008, -1, 0, -2.38498e-008, 2.08501e-015, -1, -7.5, 1.5, -0.5 )
