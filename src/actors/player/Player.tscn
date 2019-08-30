@@ -25,8 +25,9 @@ shape = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.549904, 0 )
+fov = 86.5387
 
-[node name="Position3D" type="Position3D" parent="Pivot"]
+[node name="ProjectileShooterHolder" type="Position3D" parent="Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238666, 0.255884, -0.39529 )
 
-[node name="ProjectileShooter" parent="Pivot/Position3D" instance=ExtResource( 2 )]
+[node name="ProjectileShooter" parent="Pivot/ProjectileShooterHolder" instance=ExtResource( 2 )]

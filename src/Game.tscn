@@ -16,6 +16,7 @@ extents = Vector3( 10, 0.1, 5 )
 script = ExtResource( 1 )
 
 [node name="Ground" type="StaticBody" parent="."]
+editor/display_folded = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 transform = Transform( 1, -0.000579114, 0.000543003, 0.000579239, 1, -0.000218371, -0.00054287, 0.000218703, 1, 0, 0, 0 )

@@ -1,20 +1,29 @@
 extends KinematicBody
 
 onready var camera = $Pivot/Camera
+onready var holding = $Pivot/ProjectileShooterHolder/ProjectileShooter
 
+var gravity = 30
 var velocity = Vector3()
-var gravity = 6
-var jump_speed = 4
-var max_walking_speed = 7
-var max_sprinting_speed = 10
+var jump_speed = 12
 var mouse_sensitivy = 0.006
+var max_walking_speed = 6
+var max_sprinting_speed = 9
+var projectile_shooters = []
 
 func _physics_process(delta):
 	move(delta)
-	print(velocity.length())
+
+func _process(delta):
+	if Input.is_action_pressed('shoot'):
+		holding.shoot()
 
 func move(delta):
 	update_velocity(delta)
+	if Input.is_action_pressed('jump') and is_on_floor():
+		velocity.y += jump_speed
+	if Input.is_action_pressed('crouch'):
+		print('crouch')
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 func get_max_speed():

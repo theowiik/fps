@@ -1,22 +1,24 @@
-extends Spatial
+extends MeshInstance
 
 const PROJECTILE = preload('res://src/objects/projectile/Projectile.tscn')
-onready var projectile_output_point = $ProjectileShooterMesh/ProjectileOutputPoint
+onready var projectile_output_point = $ProjectileOutputPoint
+onready var timer = $Timer
 
 var damage = 1
 var mag_size = 30
-
-func _ready():
-	pass
-
-func reload():
-	pass
-
-func _unhandled_input(event):
-	if event.is_action_pressed('shoot'):
-		shoot()
+var can_shoot = true
+var sec_between_shots = 0.2
 
 func shoot():
+	if !can_shoot:
+		return
+
+	can_shoot = false
+	timer.start(sec_between_shots)
+
 	var b = PROJECTILE.instance()
-	b.start(Vector3(1, 1, 1))
-	pass
+	b.start(projectile_output_point.global_transform)
+	get_parent().get_parent().get_parent().get_parent().add_child(b)
+
+func _on_Timer_timeout():
+	can_shoot = true
