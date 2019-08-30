@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Smoke" type="Particles"]
+emitting = false
+lifetime = 1.27
+one_shot = true
+visibility_aabb = AABB( 0, 0, 0, 0, 0, 0 )

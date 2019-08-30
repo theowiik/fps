@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/objects/projectile_shooter/projectile_shooter.gd" type="Script" id=1]
 
@@ -6,6 +6,23 @@
 top_radius = 0.03
 bottom_radius = 0.06
 height = 0.5
+
+[sub_resource type="Animation" id=2]
+resource_name = "walking"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -0.1, 0 ) ]
+}
 
 [node name="ProjectileShooter" type="MeshInstance"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 0, 0 )
@@ -17,4 +34,12 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.18557e-008 )
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 550.0
+margin_bottom = 287.0
+text = "this is some cool text"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/walking = SubResource( 2 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

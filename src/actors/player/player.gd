@@ -13,6 +13,7 @@ var projectile_shooters = []
 
 func _physics_process(delta):
 	move(delta)
+	holding.run_walking_animation(is_moving())
 
 func _process(delta):
 	if Input.is_action_pressed('shoot'):
@@ -60,3 +61,6 @@ func get_input_vec():
 		input_vec += camera_x_basis
 
 	return input_vec.normalized()
+
+func is_moving():
+	return velocity.length() != 0
