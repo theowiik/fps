@@ -35,11 +35,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.18557e-008 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_right = 550.0
-margin_bottom = 287.0
-text = "this is some cool text"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/walking = SubResource( 2 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

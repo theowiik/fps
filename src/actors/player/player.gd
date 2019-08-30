@@ -3,6 +3,7 @@ extends KinematicBody
 onready var camera = $Pivot/Camera
 onready var holding = $Pivot/ProjectileShooterHolder/ProjectileShooter
 
+var health = 100
 var gravity = 30
 var velocity = Vector3()
 var jump_speed = 12
@@ -16,6 +17,7 @@ func _physics_process(delta):
 	holding.run_walking_animation(is_moving())
 
 func _process(delta):
+	display_stats()
 	if Input.is_action_pressed('shoot'):
 		holding.shoot()
 
@@ -38,6 +40,8 @@ func _unhandled_input(event):
 		rotate_y(-event.relative.x * mouse_sensitivy)
 		$Pivot.rotate_x(-event.relative.y * mouse_sensitivy)
 		$Pivot.rotation.x = clamp($Pivot.rotation.x, -1.2, 1.2)
+	if event.is_action_pressed('reload'):
+		holding.reload()
 
 func update_velocity(delta):
 	var desired_velocity = get_input_vec() * get_max_speed()
@@ -64,3 +68,10 @@ func get_input_vec():
 
 func is_moving():
 	return velocity.length() != 0
+
+func display_stats():
+	var label = $RichTextLabel
+	label.set_text('Health: ' + str(health))
+	label.newline()
+	label.add_text('Ammo: ' + str(holding.current_ammo) + '/' + str(holding.mag_size))
+	label.add_text(' (tot: ' + str(holding.total_ammo) + ')')
