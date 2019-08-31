@@ -50,3 +50,8 @@ func run_walking_animation(on):
 		animation_player.play('walking')
 	else:
 		animation_player.stop()
+
+func _on_Area_body_entered(body):
+	print(body)
+	if body.has_method('take_weapon'):
+		body.take_weapon(self)

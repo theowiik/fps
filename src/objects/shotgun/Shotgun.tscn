@@ -42,4 +42,4 @@ material/32 = null
 script = ExtResource( 3 )
 
 [node name="ProjectileOutputPoint" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41334e-008, -0.00482724, 0.0731548 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.073 )

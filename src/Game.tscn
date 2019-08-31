@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/game.gd" type="Script" id=1]
 [ext_resource path="res://src/materials/ground.tres" type="Material" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/particles/Smoke.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/objects/coin/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/objects/block_large/BlockLarge.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/objects/shotgun/Shotgun.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 20, 0.2, 10 )
@@ -112,3 +113,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, -2 )
 
 [node name="BlockLarge8" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3967, -12.4725, -5.67237 )
+
+[node name="Shotgun" parent="." instance=ExtResource( 8 )]
+transform = Transform( -3, -2.62268e-007, 2.62268e-007, -2.62268e-007, 3, 2.62268e-007, -2.62268e-007, 2.62268e-007, -3, -5, 0.994633, 2 )

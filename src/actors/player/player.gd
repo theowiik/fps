@@ -144,3 +144,6 @@ func display_stats():
 	label.add_text('Current inv id: ' + str(selected_inventory_slot))
 	label.newline()
 	label.add_text('get_current(): ' + str(get_holding()))
+
+func take_weapon(weapon):
+	print('took weapon')

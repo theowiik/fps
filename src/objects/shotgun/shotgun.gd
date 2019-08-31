@@ -8,4 +8,5 @@ func _init():
 
 func _shoot():
 	var start_pos = projectile_output_point.global_transform
-	append_projectile(null, null)
+	var direction = start_pos.basis.y
+	append_projectile(null, direction)
