@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/barrel.glb-1ea036a9e2f654ff188ddb669b7e0214.scn"
+path="res://.import/barrel.glb-d060c858912e5618011132059edf79a0.scn"
 
 [deps]
 
-source_file="res://assets/barrel.glb"
-dest_files=[ "res://.import/barrel.glb-1ea036a9e2f654ff188ddb669b7e0214.scn" ]
+source_file="res://assets/barrel/barrel.glb"
+dest_files=[ "res://.import/barrel.glb-d060c858912e5618011132059edf79a0.scn" ]
 
 [params]
 
