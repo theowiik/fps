@@ -3,6 +3,7 @@ extends KinematicBody
 onready var camera = $Pivot/Camera
 onready var holding = $Pivot/ProjectileShooterHolder/ProjectileShooter
 
+var coins = 0
 var health = 100
 var gravity = 30
 var velocity = Vector3()
@@ -72,9 +73,14 @@ func take_damage(amount = 1):
 func is_moving():
 	return velocity.length() != 0
 
+func take_coins(amount):
+	coins += amount
+
 func display_stats():
 	var label = $RichTextLabel
 	label.set_text('Health: ' + str(health))
 	label.newline()
 	label.add_text('Ammo: ' + str(holding.current_ammo) + '/' + str(holding.mag_size))
 	label.add_text(' (tot: ' + str(holding.total_ammo) + ')')
+	label.newline()
+	label.add_text('Coins: ' + str(coins))
