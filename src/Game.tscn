@@ -38,6 +38,36 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03731, 0 )
 [node name="Barrel" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.140342, 3 )
 
+[node name="Barrel4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.51681, 2.14034, 0.762957 )
+
+[node name="Barrel9" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26298, 2.14034, 1.59275 )
+
+[node name="Barrel10" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.07326, 2.14034, 1.09126 )
+
+[node name="Barrel11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63961, 2.14034, 1.81883 )
+
+[node name="Barrel12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63961, 2.53875, 1.81883 )
+
+[node name="Barrel13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31301, 2.14159, 1.81883 )
+
+[node name="Barrel5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5553, 3.14034, -3 )
+
+[node name="Barrel6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5553, 3.55471, -3.03624 )
+
+[node name="Barrel7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5553, 3.96203, -3.00057 )
+
+[node name="Barrel8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5553, 4.36493, -3.09637 )
+
 [node name="Barrel2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.140342, 2 )
 
@@ -79,3 +109,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 2 )
 
 [node name="BlockLarge7" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, -2 )
+
+[node name="BlockLarge8" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3967, -12.4725, -5.67237 )
