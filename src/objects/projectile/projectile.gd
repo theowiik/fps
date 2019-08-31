@@ -8,7 +8,8 @@ var drop_speed = 0.05
 
 func start(start_pos, direction = null):
 	transform = start_pos
-	if !direction: direction = start_pos.basis.y
+	if !direction:
+		direction = start_pos.basis.y
 	self.direction = direction.normalized()
 
 func _physics_process(delta):

@@ -28,7 +28,10 @@ func _init():
 func _ready():
 	var ps = preload('res://src/objects/projectile_shooter/ProjectileShooter.tscn').instance()
 	projectile_shooters[0] = ps
+	ps = preload('res://src/objects/shotgun/Shotgun.tscn').instance()
+	projectile_shooters[1] = ps
 	equip_projectile_shooter(selected_inventory_slot)
+	
 
 func _physics_process(delta):
 	move(delta)
@@ -104,13 +107,15 @@ func get_input_vec():
 	return input_vec.normalized()
 
 func equip_projectile_shooter(i):
+	unequip_projectile_shooters()
 	if projectile_shooters[i] == null:
-		print(projectile_shooteer_holder.get_children().size())
-		for child in projectile_shooteer_holder.get_children():
-			projectile_shooteer_holder.remove_child(child)
-	else:
-		var x = projectile_shooters[i]
-		projectile_shooteer_holder.add_child(x)
+		return
+	var projectile_shooter = projectile_shooters[i]
+	projectile_shooteer_holder.add_child(projectile_shooter)
+
+func unequip_projectile_shooters():
+	for child in projectile_shooteer_holder.get_children():
+		projectile_shooteer_holder.remove_child(child)
 
 func take_damage(amount = 1):
 	health -= abs(amount)

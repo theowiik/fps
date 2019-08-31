@@ -7,21 +7,31 @@ onready var animation_player = $AnimationPlayer
 
 var damage = 1
 var mag_size = 30
+var can_shoot = true
 var total_ammo = 99999
 var current_ammo = 0
-var can_shoot = true
 var sec_between_shots = 0.2
+
+func _init():
+	current_ammo = mag_size
 
 func shoot():
 	if !can_shoot or current_ammo <= 0:
 		return
-
 	current_ammo -= 1
 	can_shoot = false
 	timer.start(sec_between_shots)
+	_shoot()
+
+func _shoot():
+	append_projectile()
+
+func append_projectile(start_pos = null, direction = null):
+	if start_pos == null:
+		start_pos = projectile_output_point.global_transform
 
 	var b = PROJECTILE.instance()
-	b.start(projectile_output_point.global_transform)
+	b.start(start_pos, direction)
 	get_parent().get_parent().get_parent().get_parent().add_child(b)
 
 func _on_Timer_timeout():
