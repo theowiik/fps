@@ -3,14 +3,19 @@ extends KinematicBody
 onready var camera = $Pivot/Camera
 onready var holding = $Pivot/ProjectileShooterHolder/ProjectileShooter
 
+# Stats
 var coins = 0
 var health = 100
 var gravity = 30
+
+# Movement
 var velocity = Vector3()
 var jump_speed = 12
 var mouse_sensitivy = 0.006
 var max_walking_speed = 6
 var max_sprinting_speed = 9
+
+# Inventory
 var projectile_shooters = []
 
 func _physics_process(delta):
