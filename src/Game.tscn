@@ -35,13 +35,13 @@ transform = Transform( 0.7358, 0.354721, 0.576863, -0.14031, -0.753498, 0.642304
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03731, 0 )
 
 [node name="Barrel" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.60057, 3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.140342, 3 )
 
 [node name="Barrel2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.60057, 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.140342, 2 )
 
 [node name="Barrel3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 1.60057, 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.44469, 0.556392, 2 )
 
 [node name="Smoke" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3 )
