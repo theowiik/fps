@@ -5,7 +5,7 @@
 [ext_resource path="res://src/objects/shotgun/shotgun.gd" type="Script" id=3]
 
 [node name="Shotgun" instance=ExtResource( 1 )]
-transform = Transform( -3, -2.62268e-007, 2.62268e-007, -2.62268e-007, 3, 2.62268e-007, -2.62268e-007, 2.62268e-007, -3, 0, -0.00536658, 0 )
+transform = Transform( -6, 0, -9.05975e-007, 0, 6, 0, 9.05975e-007, 0, -6, 0, 0, 0 )
 mesh = ExtResource( 2 )
 material/1 = null
 material/2 = null
@@ -42,4 +42,4 @@ material/32 = null
 script = ExtResource( 3 )
 
 [node name="ProjectileOutputPoint" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.073 )
+transform = Transform( 1, -1.50996e-007, 1.50996e-007, 1.50996e-007, -4.37114e-008, -1, 1.50996e-007, 1, -4.37114e-008, -3.18733e-009, 0, 0.0788877 )

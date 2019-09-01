@@ -7,9 +7,9 @@ onready var projectile_shooteer_holder = $Pivot/ProjectileShooterHolder
 # Stats
 var coins = 0
 var health = 100
-var gravity = 30
 
 # Movement
+var gravity = 30
 var velocity = Vector3()
 var jump_speed = 12
 var mouse_sensitivy = 0.006

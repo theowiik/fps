@@ -75,6 +75,8 @@ anims/spin = SubResource( 3 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 4 )
+unit_db = -3.0
+max_db = 1.5
 area_mask = 0
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_AudioStreamPlayer3D_finished"]
